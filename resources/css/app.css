@@ -1,0 +1,567 @@
+/* @import 'preline'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'signature-1';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/signature-font/CreattionDemo.otf');
+}
+
+body{
+    min-height: 100%;
+    font-family: 'Barlow';
+}
+table{
+    font-size: 13px;
+}
+.collapse-plus > .collapse-title:after {
+    top: 0.5rem;
+    inset-inline-end: 0.8rem;
+}
+.stop-btn{
+    @apply bg-[#F87171] hover:bg-[#e86161]
+}
+.play-btn {
+    @apply bg-[#34D399] hover:bg-[#2ebf8a]
+}
+.dlt-icon{
+    @apply inline-flex items-center p-1.5 text-rose-500 text-xs font-medium text-center hover:text-white rounded hover:bg-red-700 dark:text-red-400 dark:hover:bg-red-700 dark:hover:text-white gap-x-1
+}
+.btn-xs{
+    @apply inline-flex items-center p-1 text-xs font-medium text-center text-white rounded hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800
+}
+.bg-red{
+    @apply bg-[#831b94]
+}
+.emp-id-btn{
+    @apply inline-flex items-center justify-center px-1 py-0.5 text-xs font-medium text-center text-white bg-[#831b94] rounded hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800
+}
+.emp-id-list-btn{
+    @apply w-full inline-flex items-center justify-center p-1 text-xs font-medium text-center text-white bg-[#831b94] rounded hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800
+}
+
+.button-red{
+    @apply inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-[#831b94] rounded-md hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800
+}
+.btn-teal {
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-teal-700 rounded-md hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800 gap-x-1;
+}
+.btn-red{
+    @apply inline-flex items-center px-1 py-1 border border-red-600 text-xs font-medium text-center text-white bg-[#831b94] rounded hover:bg-red-700 hover:border-red-700 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800 gap-x-1
+}
+.btn-green{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-md hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 gap-x-1
+}
+.btn-edit{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-cyan-700 rounded-md hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800 gap-x-1
+}
+.btn-create{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-teal-500 rounded-md hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-teal-600 dark:hover:bg-teal-600 dark:focus:ring-teal-600 gap-x-1
+}
+.btn-view{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-teal-500 rounded-md hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-teal-600 dark:hover:bg-teal-600 dark:focus:ring-teal-600 gap-x-1
+}
+
+.btn-import{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-lime-700 rounded-md hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 gap-x-1
+}
+.btn-export{
+    @apply inline-flex items-center px-2 py-2 text-sm font-medium text-center text-white bg-yellow-700 rounded-md hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 gap-x-1
+}
+
+.inputLabel{
+    @apply inline-block text-sm  font-medium text-gray-800 dark:text-neutral-200 mb-1
+}
+
+.inputField{
+    @apply block w-full  px-4 py-2 text-sm border border-gray-200 rounded-md bg-neutral-100 dark:bg-neutral-700 focus:border-red-500 focus:ring-red-500 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-300 placeholder-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600
+}
+.inputFieldCompact{
+    @apply block w-full  px-2 py-2 text-sm border border-gray-200 rounded bg-neutral-100 dark:bg-neutral-700 focus:border-gray-200 focus:ring-0 focus:ring-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-300 placeholder-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600
+}
+.inputFieldDashboard{
+    @apply !py-3 !px-4 block w-full bg-white border-gray-200 rounded-lg text-sm focus:border-red-600 focus:ring-red-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600
+}
+.inputFieldBorder{
+    @apply block w-full  px-4 mb-2 py-2 text-sm border border-gray-400 rounded-md bg-neutral-100 dark:bg-neutral-700 focus:border-red-500 focus:ring-red-500 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-300 placeholder-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 disabled:opacity-70 disabled:text-gray-700
+}
+.inputFieldBorderNoMargin{
+    @apply block w-full  px-4 py-2 text-sm border border-gray-400 rounded-md bg-neutral-100 dark:bg-neutral-700 focus:border-red-500 focus:ring-red-500 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-300 placeholder-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 disabled:opacity-70 disabled:text-gray-700
+}
+.error_msg{
+    @apply text-[#831b94] text-xs
+}
+.submit-button{
+    @apply inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-center text-white bg-[#831b94] border-red-600 hover:border-red-700 rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800 disabled:text-neutral-600 disabled:bg-neutral-300 dark:disabled:text-neutral-300 dark:disabled:bg-neutral-700
+}
+.submit-button-sm{
+    @apply inline-flex items-center gap-1 px-3 py-1 font-medium text-center text-white bg-[#831b94] rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800 disabled:text-neutral-600 disabled:bg-neutral-300 dark:disabled:text-neutral-300 dark:disabled:bg-neutral-700
+}
+.submit-button-xs{
+    @apply inline-flex items-center gap-1 px-2 py-0.5 font-medium text-center text-sm text-white bg-[#831b94] rounded-md hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-[#831b94] dark:hover:bg-red-700 dark:focus:ring-red-800 disabled:text-neutral-600 disabled:bg-neutral-300 dark:disabled:text-neutral-300 dark:disabled:bg-neutral-700
+}
+.submit-button-green{
+    @apply inline-flex items-center gap-1 px-3 py-1.5 font-medium text-center text-white text-sm bg-green-600 rounded-md hover:bg-green-700 focus:ring focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:text-neutral-600 disabled:bg-neutral-300 dark:disabled:text-neutral-300 dark:disabled:bg-neutral-700
+}
+.cancel-button{
+    @apply inline-flex items-center px-3 py-1.5 text-sm font-medium text-gray-600 border rounded-md border-neutral-500 bg-blend-hue gap-x-2 hover:border-red-600 hover:text-[#831b94] disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700
+}
+.tabButton{
+    @apply hs-tab-active:border-red-600 hs-tab-active:text-[#831b94] hs-tab-active:font-semibold dark:hs-tab-active:text-[#831b94] dark:hs-tab-active:font-semibold py-1.5 pe-3 inline-flex items-center gap-x-2 border-e-[3px] border-transparent text-base whitespace-nowrap text-neutral-800 dark:text-neutral-400 hover:text-[#831b94] focus:outline-none focus:text-[#831b94] disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-red-500 dark:hover:font-semibold
+}
+.actionBtn{
+    @apply w-6 aspect-square flex items-center justify-center rounded-md text-white /* pt-1 */
+}
+.actionBtn.red{
+    @apply bg-[#831b94]
+}
+.actionBtn.teal{
+    @apply bg-teal-600 disabled:bg-neutral-400
+}
+.actionBtn.neutral{
+    @apply bg-neutral-600
+}
+
+.button-light{
+    @apply inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-500 border rounded-md border-neutral-300 gap-x-2 hover:border-red-600 hover:text-[#831b94] disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700
+}
+
+
+.group-btn-l{
+    @apply border border-slate-200 rounded-l-lg text-slate-800 hover:text-white text-sm bg-white hover:bg-[#831b94] font-medium px-4 py-2 inline-flex space-x-1 items-center
+}
+.group-btn-m{
+    @apply border-y border-r border-slate-200 text-slate-800 hover:text-white text-sm bg-white hover:bg-[#831b94] font-medium px-4 py-2 inline-flex space-x-1 items-center
+}
+.group-btn-r{
+    @apply border border-l-0 rounded-r-lg border-slate-200 text-slate-800 hover:text-white text-sm bg-white hover:bg-[#831b94] font-medium px-4 py-2 inline-flex space-x-1 items-center
+}
+
+
+.btn-pending{
+    @apply w-full rounded-full px-1.5 pt-0.5 pb-1 text-white text-center truncate text-xs bg-[#ffa21d]
+}
+
+.btn-approved{
+    @apply w-full rounded-full px-1.5 pt-0.5 pb-1 text-white text-center truncate text-xs bg-[#6fd943]
+}
+.btn-rejected{
+    @apply w-full rounded-full px-1.5 pt-0.5 pb-1 text-white text-center truncate text-xs bg-red-500
+}
+
+.btn-pending-tr{
+    @apply rounded px-1.5 pt-0.5 pb-1 text-yellow-700 text-center truncate text-xs font-medium bg-yellow-300/50
+}
+.btn-approved-tr{
+    @apply rounded px-1.5 pt-0.5 pb-1 text-green-800 text-center truncate text-xs font-medium bg-green-300/50
+}
+.btn-rejected-tr{
+    @apply rounded px-1.5 pt-0.5 pb-1 text-red-800 text-center truncate text-xs font-medium bg-red-300/50
+}
+
+/*
+  FULLCALENDAR
+*/
+
+.fc-button {
+    @apply py-1 px-2.5 bg-[#831b94] hover:bg-gray-950 m-0 h-[36px] border-none focus:ring-1 focus:ring-red-900 focus:outline-1 focus:outline-red-900 !important
+}
+
+.fc-button-group {
+    @apply space-x-0 !important
+}
+
+.fc-toolbar-chunk {
+    @apply space-x-4 !important
+}
+
+.fc-today-button:disabled {
+    @apply bg-gray-800/50 !important
+}
+
+.fc-today-button.fc-button-primary:not(.fc-today-button:disabled) {
+    @apply bg-red-900 hover:bg-gray-950 transition-colors !important
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+    @apply border-gray-600/10 !important
+}
+
+.fc-button.fc-button-primary.fc-button-active {
+    @apply bg-gray-800 !important
+}
+
+.fc-toolbar-title {
+    @apply text-center text-xl font-semibold !important
+}
+
+.fc-day.fc-day-fri.fc-day-today.fc-daygrid-day {
+    @apply bg-sky-900/60 !important
+}
+
+.fc.fc-media-screen.fc-direction-ltr.fc-theme-standard {
+    @apply w-full md:min-w-[450px] !important
+}
+
+.fc-highlight {
+    @apply bg-sky-400/10 !important
+}
+
+.fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
+    @apply flex md:flex-row flex-col-reverse md:items-center items-start md:justify-between justify-start gap-2 !important
+}
+
+.fc-popover {
+    @apply z-[1] !important
+}
+
+.fc .fc-list-sticky .fc-list-day > th {
+    @apply bg-[#831b94] text-white !important
+}
+.fc-theme-standard .fc-list-day-cushion{
+    @apply bg-none !important
+}
+.fc-listMonth-view,
+.fc-dayGridWeek-view.fc-view.fc-daygrid {
+    @apply bg-transparent text-gray-500 !important
+}
+
+.fc-list-event:hover {
+    @apply text-[#831b94] cursor-pointer !important
+}
+
+.fc-dayGridDay-view.fc-view.fc-daygrid .fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+    @apply bg-gray-900 !important
+}
+
+.fc-popover-header {
+    @apply bg-gray-900 text-gray-400 !important
+}
+
+.fc-popover-body {
+    @apply bg-gray-900 !important
+}
+
+.tooltip:before{
+    z-index: 1000;
+}
+.tooltip-wrap:before{
+    width: auto!important;
+    z-index: 1000;
+}
+
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px !important;
+}
+body::-webkit-scrollbar {
+    width: 5px !important;
+}
+#application-sidebar::-webkit-scrollbar {
+    width: 0px !important;
+}
+
+/* height */
+::-webkit-scrollbar {
+    height: 0px !important;
+}
+body::-webkit-scrollbar {
+    height: 7px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #d8dadd00 !important;
+    border-radius: 0px !important;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: inset 0 0 6px #fff;
+}
+body::-webkit-scrollbar-thumb {
+    background: #ff0e56 !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+#application-sidebar::-webkit-scrollbar-thumb {
+    background: white !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: inset 0 0 6px #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: #ca0000 !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* ---- End of Scroll Bar ---- */
+/* Others */
+table.dataTable{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.dt-processing{
+    position: fixed !important;
+    top:50% !important;
+    left: calc(50% + 120px)!important;
+    right: calc(50% + 120px)!important;
+}
+
+.dt-buttons{}
+.dt-buttons .dt-button{
+    padding: 5px 8px;
+    color: #fff;
+    background: #0d9488;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+.dt-buttons .dt-button:hover{
+    background: #054943;
+}
+div.dt-container div.dt-layout-cell{
+
+}
+.dt-container .dt-layout-cell.dt-start {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.dt-info{
+    color:#0d9488!important;
+    font-weight: 500;
+    font-size: 11.5px;
+}
+.dt-container select.dt-input{
+    padding: 2px 6px!important;
+    padding-right: 0px!important;
+    width: 60px;
+    background-color: #F5F5F5;
+
+}
+.dt-column-title {
+    font-size: 12px !important;
+}
+.dt-input, .dt-search label{
+    margin: 0px 8px!important;
+}
+div.dt-container .dt-paging .dt-paging-button{
+    padding:4px 10px;
+}
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover{
+    color: #fff !important;
+    background: #DC2626!important;
+    border: 1px solid #DC2626;
+}
+
+
+div.dt-processing > div:last-child > div{
+    background: #DC2626;
+}
+
+/*select {
+    background-size: 1em 1.5em !important;
+}*/
+/* End of Other */
+
+
+
+/*SELECT 2*/
+
+.select2-container--default .select2-selection--single{
+    height: auto;
+    background-color: #F5F5F5;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+/*.select2-container--open .select2-selection--single{
+    border: 1px solid #DC2626;
+}*/
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding:4px 8px;
+    width: calc(100% - 10px);
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top:7px;
+    bottom:7px;
+}
+.select2-dropdown{
+    border: 1px solid #E5E7EB;
+    font-size: 14px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+    border: 1px solid #E5E7EB;
+}
+.select2-results__option.select2-results__option--selectable.select2-results__option--highlighted{
+    background-color: #DC2626;
+}
+.select2-search__field:focus{
+    border: 1px solid #DC2626!important;
+    box-shadow:none !important;
+}
+
+.select2-xs .select2-container--default .select2-selection--single .select2-selection__rendered{
+    padding:0px 4px;
+    /* font-size: 12px; */
+    text-align: left;
+}
+.select2-xs .select2.select2-container.select2-container--default{
+    width: 192px!important;
+}
+.select2-xs .select2-container--default .select2-selection--single .select2-selection__arrow{
+    top:3px;
+    bottom:3px;
+}
+/*END SELECT 2*/
+
+
+
+
+
+/*Sidebar*/
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+}
+.rotate-0 {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+}
+/* #sidebar.toggle-collapsed #toggleButton i{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+}
+#sidebar.toggle-full #toggleButton i{
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+} */
+#sidebar.toggle-collapsed{
+    transition: all 0.25s ease, background 0.25s ease;
+    -webkit-transition: all 0.25s ease, background 0.25s ease;
+    -moz-transition: all 0.25s ease, background 0.25s ease;
+    -ms-transition: all 0.25s ease, background 0.25s ease;
+}
+#sidebar.toggle-full{
+    overflow-y: auto;
+}
+#sidebar.toggle-collapsed .sidebar-logo-full{
+    display: none;
+}
+#sidebar.toggle-full .sidebar-logo-full{
+    display: block;
+}
+#sidebar.toggle-full .sidebar-logo-minimized{
+    height: 40px;
+    display: none;
+}
+#sidebar.toggle-collapsed .sidebar-logo-minimized{
+    height: 40px;
+    display: block;
+}
+#sidebar.toggle-collapsed .logo-padding{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#sidebar.toggle-full .logo-padding{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#sidebar.toggle-collapsed .sidebar-link-label,
+#sidebar.toggle-collapsed .sidebar-link-label-indicator
+{
+    display: none !important;
+}
+
+#sidebar.toggle-collapsed .hs-accordion{
+    position: relative;
+}
+#sidebar.toggle-collapsed .hs-accordion #staff-accordion-child {
+    position: absolute;
+    padding-top: 32px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    top: 0px;
+    left: 37px;
+    width: 200px;
+    border-radius: 5px;
+    background: #fff;
+    display: none!important;
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.1);
+    transition: left 0.25s ease, position 0.25s ease;
+    -webkit-transition: left 0.25s ease, position 0.25s ease;
+    -moz-transition: left 0.25s ease, position 0.25s ease;
+    -ms-transition: left 0.25s ease, position 0.25s ease;
+    border: 1px solid #ddd;
+}
+#sidebar.toggle-collapsed .hs-accordion:hover #staff-accordion-child
+{
+    display: block!important;
+}
+
+#sidebar.toggle-collapsed .hs-accordion .sidebar-link-label {
+    position: absolute;
+    width: 200px;
+    color: #0a0a0a;
+    top: 0px;
+    left: 37px;
+    z-index: 100;
+    padding: 8px 32px;
+    border-radius: 5px;
+    transition: width 0.25s ease, left 0.25s ease;
+    -webkit-transition: width 0.25s ease, left 0.25s ease;
+    -moz-transition: width 0.25s ease, left 0.25s ease;
+    -ms-transition: width 0.25s ease, left 0.25s ease;
+}
+#sidebar.toggle-collapsed .hs-accordion:hover .sidebar-link-label
+{
+    display: block!important;
+}
+#sidebar.toggle-collapsed .hs-accordion:nth-child(1):hover .sidebar-link-label,
+#sidebar.toggle-collapsed .hs-accordion:nth-child(2):hover .sidebar-link-label {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar.toggle-collapsed .hs-accordion:nth-child(1):hover .sidebar-link-label:hover,
+#sidebar.toggle-collapsed .hs-accordion:nth-child(2):hover .sidebar-link-label:hover {
+    color: #FFF;
+    background-color: #DC2626;
+}
+
+#sidebar.toggle-collapsed button{
+    width: 36px;
+    /* height: 46px; */
+}
+
+.toggle-pl-70{
+    padding-left :70px;
+}
+@media (max-width: 767px) {
+    .toggle-pl-70 {
+        padding-left: 0px;
+    }
+}
+
